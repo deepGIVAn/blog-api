@@ -18,7 +18,7 @@ const uploadMiddleware = multer({ dest: "uploads/" });
 
 // app.use(cors())
 // Yarn add cors
-app.use(cors({credentials:true}));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 // we are setting here static files so that we can use uploads images at front-end side ..
@@ -169,14 +169,13 @@ app.get("/post", async (req, res) => {
 
   // res.json(post);
 
-// updated now
+  // updated now
   res.json(
     await Post.find()
       .populate("author", ["username"])
       .sort({ createdAt: -1 })
       .limit(20)
   );
-
 });
 
 app.get("/post/:id", async (req, res) => {
@@ -184,7 +183,6 @@ app.get("/post/:id", async (req, res) => {
   const postDoc = await Post.findById(id).populate("author", ["username"]);
   res.json(postDoc);
 });
-
 
 app.listen(PORT, () => {
   console.log(`Running at ${PORT}`);
