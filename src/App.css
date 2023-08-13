@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #222;
+}
+
+main {
+  padding: 10px;
+  max-width: 96%;
+  margin: 0 auto;
+}
+
+a {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* for in case of mobile .. */
+@media screen and (min-width: 768px) {
+  div.post {
+    grid-template-columns: 6fr 7fr;
+  }
+  main {
+    max-width: 84%;
+  }
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  /* text-decoration: none;
+  color: inherit; */
+  font-size: 1.5rem;
+}
+
+/* actually here we are accessing the 'Link' tag of react, okk!!.. by using 'a' tag */
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* div.post div.image img {
+  width: 100%;
+  height: auto;
+} */
+
+div.post p.info {
+  margin: 0.1rem 0rem;
+  color: #888;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  gap: 1rem;
+}
+
+div.post p.info span.author {
+  color: #333;
+}
+
+div.post p.summary {
+  margin: 0.1rem 0;
+  line-height: 1.5rem;
+}
+
+form.login,
+form.register {
+  max-width: 40%;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  padding: 0.4rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: #eadfdf;
+  border: 2px solid #908383;
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  padding: 0.2rem;
+  background-color: #555;
+  color: white;
+  border: 0;
+  font-weight: bolder;
+  font-size: larger;
+  border-radius: 0.5rem;
+}
+
+form.login h1,
+form.register h1 {
+  text-align: center;
+}
+
+/* imp style okk!!!! */
+
+div.post-page div.image {
+  max-height: 300px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img {
+  object-position: center center;
+  object-fit: cover;
+  width: 100%;
+  /* or use contain to get the whole image .. */
+}
+
+div.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 0.8rem;
+  color: #797272;
+  font-weight: bold;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight:500;
+}
+
+div.post-page div.content p {
+  line-height: 1rem;
+}
+
+div.edit-row {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+div.post-page a.edit-btn {
+  background-color: #333;
+  /* display: inline-block; */
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #fff;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  text-decoration: none;
+  border-radius: 5px;
+  /* font-weight: bold; */
+}
+
+a svg {
+  height: 1.2rem;
+}
