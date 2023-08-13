@@ -36,7 +36,6 @@ const EditPost = () => {
     const response = await fetch(`https://blog-api-dotx.onrender.com/post`, {
       method: "PUT",
       body: data,
-      credentials: "include",
     });
 
     if (response.ok) {

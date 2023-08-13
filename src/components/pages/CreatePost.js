@@ -25,7 +25,7 @@ const CreatePost = () => {
     const response = await fetch("https://blog-api-dotx.onrender.com/post", {
       method: "POST",
       body: data,
-      credentials: "include", // for getting username for authors okk!!!
+      // for getting username for authors okk!!!
     });
 
     // console.log(await response.json());

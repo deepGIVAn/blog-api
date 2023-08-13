@@ -9,9 +9,7 @@ const Header = () => {
   // const [username, setUsername] = useState(null);
 
   useEffect(() => {
-    fetch("https://blog-api-dotx.onrender.com/profile", {
-      credentials: "include",
-    }).then((response) => {
+    fetch("https://blog-api-dotx.onrender.com/profile", {}).then((response) => {
       response.json().then((userInfo) => {
         // setUsername(userInfo.username);
         setUserInfo(userInfo);
@@ -21,7 +19,6 @@ const Header = () => {
 
   function logout() {
     fetch("https://blog-api-dotx.onrender.com/logout", {
-      credentials: "include",
       method: "POST",
     });
     // setUsername(null); // after logput clicking we just need to do this for refreshing the headers ..
