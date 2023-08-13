@@ -18,7 +18,7 @@ const uploadMiddleware = multer({ dest: "uploads/" });
 
 // app.use(cors())
 // Yarn add cors
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 // we are setting here static files so that we can use uploads images at front-end side ..
